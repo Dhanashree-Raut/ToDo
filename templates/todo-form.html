@@ -1,0 +1,16 @@
+<!-- To do form entry -->
+<div class="container">
+    <h2> {{form_title | default("Todo") }} </h2>
+    <form action="{{'/update/'+ todo.srno|string if todo else '/'}}" method="post">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" name="title" class="form-control" id="title" aria-describedby="title" value="{{todo.title if todo else '' }}" >
+        </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Description</label>
+          <input type="text" name="desc" class="form-control" id="desc" value="{{todo.desc if todo else '' }}">
+        </div>
+        <button type="submit" class="btn btn-primary">{{ button_name | default("Submit") }}</button>
+    </form>
+  </div>
+  <!-- End todo form -->

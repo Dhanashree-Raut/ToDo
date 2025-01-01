@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">About Us</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p>
+                    At Todo List App, our mission is to empower individuals and teams to organize their tasks effortlessly and boost productivity. 
+                    We strive to provide a seamless and user-friendly experience to help you keep track of your daily to-dos.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='assets/images/todo-img1.jpg') }}" alt="About Us Image" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='assets/images/todo-img-2.jpg') }}" alt="Team Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>Who We Are</h2>
+                <p>
+                    We are a passionate team of developers and productivity enthusiasts committed to building tools that make your life easier. 
+                    Whether you're a student, professional, or entrepreneur, our app is designed to adapt to your needs and help you achieve your goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h2>Get in Touch</h2>
+            <p>
+                Have questions or feedback? We'd love to hear from you! Contact us at 
+                <a href="mailto:support@todolistapp.com">support@todolistapp.com</a>.
+            </p>
+        </div>
+    </div>
+
+{% endblock body %}
+    

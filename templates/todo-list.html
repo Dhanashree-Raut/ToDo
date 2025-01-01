@@ -1,0 +1,35 @@
+ <!-- List to do here -->
+ <div class="container my-3">
+    <h2> To DO </h2>
+   
+          {% if all_todo|length == 0 %}
+          <div class="alert alert-primary" role="alert">
+            No Recor Found! Add Your First Todo.
+          </div>
+          {% else %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Update/Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for todo in all_todo %}
+                  <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.desc}}</td>
+                    <td>{{todo.date_created}}</td>
+                    <td><a href="/update/{{todo.srno}}" type="button" class="btn btn-warning">Update</a>
+                  <a href="/delete/{{todo.srno}}" type="button" class="btn btn-danger">Delete</a></td>
+                  </tr>            
+              {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+         
+</div>
